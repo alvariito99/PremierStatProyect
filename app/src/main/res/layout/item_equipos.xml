@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="16dp">
+    <!--  ******************* PASO 11 *************  -->
+    <ImageView android:id="@+id/ivEquipo"
+        android:layout_width="100dp" android:layout_height="100dp" android:layout_marginStart="16dp" android:layout_marginTop="16dp" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" tools:background="@color/black"/>
+    <TextView android:id="@+id/textView2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:text="Equipo:" android:textSize="18sp" android:textStyle="bold" app:layout_constraintBottom_toTopOf="@+id/tvEquipoName" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/ivEquipo" app:layout_constraintTop_toTopOf="@+id/ivEquipo" app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView android:id="@+id/tvEquipoName" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:textSize="16sp" app:layout_constraintBottom_toTopOf="@+id/textView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/ivEquipo" app:layout_constraintTop_toBottomOf="@+id/textView2" app:layout_constraintVertical_chainStyle="packed" tools:text="Betis"/>
+    <TextView android:id="@+id/textView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginTop="8dp" android:layout_marginEnd="16dp" android:text="División:" android:textSize="14sp" android:textStyle="bold" app:layout_constraintBottom_toTopOf="@+id/tvEquipoLiga" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/ivEquipo" app:layout_constraintTop_toBottomOf="@+id/tvEquipoName"/>
+    <TextView android:id="@+id/tvEquipoLiga" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:textSize="12sp" app:layout_constraintBottom_toTopOf="@+id/textView3" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toEndOf="@+id/ivEquipo" app:layout_constraintTop_toBottomOf="@+id/textView" tools:text="Primera"/>
+    <TextView android:id="@+id/textView3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:text="Estadio:" android:textSize="14sp" android:textStyle="bold" app:layout_constraintBottom_toTopOf="@+id/tvEquipoEstadio" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/ivEquipo" app:layout_constraintTop_toBottomOf="@+id/tvEquipoLiga"/>
+    <TextView android:id="@+id/tvEquipoEstadio" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:textSize="12sp" app:layout_constraintBottom_toBottomOf="@+id/ivEquipo" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toEndOf="@+id/ivEquipo" app:layout_constraintTop_toBottomOf="@+id/textView3" tools:text="Emirates Stadium"/>
+
+    <!-- Icono de favoritos (seleccionable) -->
+    <ImageButton
+        android:id="@+id/ivFavoritos"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/ic_favourite"
+        android:background="?attr/selectableItemBackground"
+    app:layout_constraintTop_toTopOf="@+id/tvEquipoName"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:contentDescription="Favoritos" /> <!-- Descripción para accesibilidad -->
+
+    <!-- Icono de comentarios (seleccionable) -->
+    <ImageButton
+        android:id="@+id/ivComentarios"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/ic_chat"
+        android:background="?attr/selectableItemBackground"
+    app:layout_constraintTop_toBottomOf="@+id/ivFavoritos"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:contentDescription="Comentarios" />
+    <!-- Descripción para accesibilidad -->
+
+
+    <ImageButton
+        android:id="@+id/informaciondetallada"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/ic_info"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@+id/ivComentarios"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Informacion" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

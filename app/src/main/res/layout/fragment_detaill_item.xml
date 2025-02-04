@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetaillItemFragment"
+    android:padding="16dp">
+
+    <!-- Imagen del equipo (Escudo o foto) -->
+    <ImageView
+        android:id="@+id/team_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter" />
+
+    <!-- Nombre del equipo -->
+    <TextView
+        android:id="@+id/team_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Equipo"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/team_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Liga del equipo -->
+    <TextView
+        android:id="@+id/team_league"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Liga: Premier League"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/team_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Estadio del equipo -->
+    <TextView
+        android:id="@+id/team_stadium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Estadio: Old Trafford"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/team_league"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Año de Fundación -->
+    <TextView
+        android:id="@+id/team_founded"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Fundado en: 1878"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/team_stadium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Información adicional -->
+    <TextView
+        android:id="@+id/team_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Información adicional del equipo."
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/team_founded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botón de Cerrar -->
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/team_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

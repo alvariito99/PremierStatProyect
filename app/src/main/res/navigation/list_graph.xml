@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_graph"
+    app:startDestination="@id/itemListFragment">
+
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.example.premierstats.ItemListFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_itemListFragment_to_detaillItemFragment"
+            app:destination="@id/detaillItemFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_detailFavItemFragment"
+            app:destination="@id/detailFavItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFavItemFragment"
+        android:name="com.example.premierstats.DetailFavItemFragment"
+        android:label="fragment_detail_fav_item"
+        tools:layout="@layout/fragment_detail_fav_item" >
+        <argument
+            android:name="idequipo"
+            app:argType="integer" />
+        <argument
+            android:name="nombreEquipo"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/detaillItemFragment"
+        android:name="com.example.premierstats.DetaillItemFragment"
+        android:label="fragment_detaill_item"
+        tools:layout="@layout/fragment_detaill_item" >
+        <argument
+            android:name="idEquipo"
+            app:argType="integer" />
+    </fragment>
+</navigation>

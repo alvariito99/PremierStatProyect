@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PremierStats</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hola blank fragment</string>
+    <string name="desliza">desliza</string>
+    <string name="btnMenu">btnMenu</string>
+    <string name="Menu">Menu</string>
+    <string name="add_comment">add_comment</string>
+    <string name="logo_premier_description">logopremier\n</string>
+</resources>
